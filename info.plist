@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>bundleid</key>
+	<string>com.obatakeshi.touchmemo</string>
+	<key>connections</key>
+	<dict>
+		<key>7F87AA06-72BC-4937-9C3A-EEA1797DD217</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>76D2A03D-484E-4D38-AB79-0A03D32EA310</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>sourceoutputuid</key>
+				<string>F0523266-F677-4587-8CD3-CC51DFE9C2CC</string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>1A768C01-8DBE-4D12-97A0-163D1065CF57</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>A192736B-F8A5-4D36-ABDE-BB94FF7F7B15</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>7F87AA06-72BC-4937-9C3A-EEA1797DD217</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+	</dict>
+	<key>createdby</key>
+	<string>ObaTakeshi</string>
+	<key>description</key>
+	<string></string>
+	<key>disabled</key>
+	<false/>
+	<key>name</key>
+	<string>Touch memo</string>
+	<key>objects</key>
+	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>query=$1
+
+echo -n $query
+
+todays=$(date "+%Y-%m-%d")
+
+open ~/Documents/touch_memo/${todays}.txt</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>76D2A03D-484E-4D38-AB79-0A03D32EA310</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>0</integer>
+				<key>keyword</key>
+				<string>m</string>
+				<key>subtext</key>
+				<string></string>
+				<key>text</key>
+				<string>memo</string>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>A192736B-F8A5-4D36-ABDE-BB94FF7F7B15</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>conditions</key>
+				<array>
+					<dict>
+						<key>inputstring</key>
+						<string>{query}</string>
+						<key>matchcasesensitive</key>
+						<false/>
+						<key>matchmode</key>
+						<integer>0</integer>
+						<key>matchstring</key>
+						<string>today</string>
+						<key>outputlabel</key>
+						<string>open today memo</string>
+						<key>uid</key>
+						<string>F0523266-F677-4587-8CD3-CC51DFE9C2CC</string>
+					</dict>
+				</array>
+				<key>elselabel</key>
+				<string>write memo</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.conditional</string>
+			<key>uid</key>
+			<string>7F87AA06-72BC-4937-9C3A-EEA1797DD217</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>68</integer>
+				<key>script</key>
+				<string>import sys
+import os
+from datetime import datetime as dt
+
+query = sys.argv[1]
+
+sys.stdout.write(query)
+
+dirname = os.environ['HOME'] + '/Documents/touch_memo/'
+filename = dt.now().strftime('%Y-%m-%d') + '.txt'
+
+if not os.path.isdir(dirname):
+	os.mkdir(dirname)
+
+with open(dirname + filename, mode='a') as f:
+	f.write('[' + dt.now().strftime('%H:%M:%S') + '] ' + query)</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>3</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>1A768C01-8DBE-4D12-97A0-163D1065CF57</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+	</array>
+	<key>readme</key>
+	<string></string>
+	<key>uidata</key>
+	<dict>
+		<key>1A768C01-8DBE-4D12-97A0-163D1065CF57</key>
+		<dict>
+			<key>xpos</key>
+			<integer>535</integer>
+			<key>ypos</key>
+			<integer>280</integer>
+		</dict>
+		<key>76D2A03D-484E-4D38-AB79-0A03D32EA310</key>
+		<dict>
+			<key>xpos</key>
+			<integer>545</integer>
+			<key>ypos</key>
+			<integer>65</integer>
+		</dict>
+		<key>7F87AA06-72BC-4937-9C3A-EEA1797DD217</key>
+		<dict>
+			<key>xpos</key>
+			<integer>265</integer>
+			<key>ypos</key>
+			<integer>120</integer>
+		</dict>
+		<key>A192736B-F8A5-4D36-ABDE-BB94FF7F7B15</key>
+		<dict>
+			<key>xpos</key>
+			<integer>50</integer>
+			<key>ypos</key>
+			<integer>100</integer>
+		</dict>
+	</dict>
+	<key>variables</key>
+	<dict>
+		<key>dirname</key>
+		<string>~/Documents/touch_memo/</string>
+	</dict>
+	<key>variablesdontexport</key>
+	<array/>
+	<key>version</key>
+	<string>0.1.0</string>
+	<key>webaddress</key>
+	<string></string>
+</dict>
+</plist>

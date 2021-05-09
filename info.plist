@@ -31,11 +31,24 @@
 				<false/>
 			</dict>
 		</array>
-		<key>A192736B-F8A5-4D36-ABDE-BB94FF7F7B15</key>
+		<key>849ED8CA-E3C8-4B95-8861-ADB753BB3FE9</key>
 		<array>
 			<dict>
 				<key>destinationuid</key>
 				<string>7F87AA06-72BC-4937-9C3A-EEA1797DD217</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>A192736B-F8A5-4D36-ABDE-BB94FF7F7B15</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>849ED8CA-E3C8-4B95-8861-ADB753BB3FE9</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -81,6 +94,47 @@ open ~/Documents/touch_memo/${todays}.txt</string>
 			<string>alfred.workflow.action.script</string>
 			<key>uid</key>
 			<string>76D2A03D-484E-4D38-AB79-0A03D32EA310</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>68</integer>
+				<key>script</key>
+				<string># if not exitsts target file, touch blank file.
+
+import sys
+import os
+from datetime import datetime as dt
+
+query = sys.argv[1]
+
+sys.stdout.write(query)
+
+dirname = os.environ['HOME'] + '/Documents/touch_memo/'
+filename = dt.now().strftime('%Y-%m-%d') + '.txt'
+
+if not os.path.isdir(dirname):
+	os.mkdir(dirname)
+
+if not os.path.isfile(dirname + filename):
+	with open(dirname + filename, mode='w') as f:
+		pass</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>3</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>849ED8CA-E3C8-4B95-8861-ADB753BB3FE9</string>
 			<key>version</key>
 			<integer>2</integer>
 		</dict>
@@ -181,9 +235,9 @@ with open(dirname + filename, mode='a') as f:
 		<key>1A768C01-8DBE-4D12-97A0-163D1065CF57</key>
 		<dict>
 			<key>xpos</key>
-			<integer>535</integer>
+			<integer>545</integer>
 			<key>ypos</key>
-			<integer>280</integer>
+			<integer>185</integer>
 		</dict>
 		<key>76D2A03D-484E-4D38-AB79-0A03D32EA310</key>
 		<dict>
@@ -195,16 +249,23 @@ with open(dirname + filename, mode='a') as f:
 		<key>7F87AA06-72BC-4937-9C3A-EEA1797DD217</key>
 		<dict>
 			<key>xpos</key>
-			<integer>265</integer>
+			<integer>370</integer>
 			<key>ypos</key>
-			<integer>120</integer>
+			<integer>160</integer>
+		</dict>
+		<key>849ED8CA-E3C8-4B95-8861-ADB753BB3FE9</key>
+		<dict>
+			<key>xpos</key>
+			<integer>210</integer>
+			<key>ypos</key>
+			<integer>140</integer>
 		</dict>
 		<key>A192736B-F8A5-4D36-ABDE-BB94FF7F7B15</key>
 		<dict>
 			<key>xpos</key>
-			<integer>50</integer>
+			<integer>35</integer>
 			<key>ypos</key>
-			<integer>100</integer>
+			<integer>140</integer>
 		</dict>
 	</dict>
 	<key>variables</key>

@@ -3,39 +3,50 @@
 <plist version="1.0">
 <dict>
 	<key>bundleid</key>
-	<string>com.obatakeshi.touchmemo</string>
+	<string>work.obatake.touchmemo</string>
 	<key>connections</key>
 	<dict>
-		<key>7F87AA06-72BC-4937-9C3A-EEA1797DD217</key>
+		<key>48FFA957-52F3-49C6-A82B-7BB395FDD9E5</key>
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>76D2A03D-484E-4D38-AB79-0A03D32EA310</string>
+				<string>02DB9380-CFDB-4F5C-94B6-6D77560D899C</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
 				<string></string>
 				<key>sourceoutputuid</key>
-				<string>F0523266-F677-4587-8CD3-CC51DFE9C2CC</string>
+				<string>99CB8953-9321-4691-8B50-206212B0BB78</string>
 				<key>vitoclose</key>
 				<false/>
 			</dict>
 			<dict>
 				<key>destinationuid</key>
-				<string>1A768C01-8DBE-4D12-97A0-163D1065CF57</string>
+				<string>B757A05F-0AD7-4CA1-AB34-FA8D546A6DB4</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
 				<string></string>
+				<key>sourceoutputuid</key>
+				<string>4F012951-6A07-48A5-8201-F6E51E5B2FAD</string>
 				<key>vitoclose</key>
 				<false/>
 			</dict>
-		</array>
-		<key>849ED8CA-E3C8-4B95-8861-ADB753BB3FE9</key>
-		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>7F87AA06-72BC-4937-9C3A-EEA1797DD217</string>
+				<string>C445A0DA-7A59-4831-B6B2-903B31AFA4FA</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>sourceoutputuid</key>
+				<string>DE9DC13E-898E-4547-BA29-4042422D87D8</string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>D3BE19C9-C7F0-42F9-AD9D-4663B0F9D12F</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -48,7 +59,72 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>849ED8CA-E3C8-4B95-8861-ADB753BB3FE9</string>
+				<string>E5D04F14-2184-405E-B5E2-2669DD51A7BE</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>B4A793D3-A3FD-4CD5-831A-42CE7AA24B6D</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>EA901C19-4368-4AED-B0DD-CCBE6F68A9FD</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>B757A05F-0AD7-4CA1-AB34-FA8D546A6DB4</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>BEEF73CA-4BFA-417A-9172-5D6CD8BC046A</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>D3BE19C9-C7F0-42F9-AD9D-4663B0F9D12F</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>F988662D-B97B-4F63-BB02-5AD522FE3A38</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>DC311D32-C7C2-4636-9720-C4269F05688E</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>327AF952-F8E2-4D20-86B4-6A454759FB2E</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>E5D04F14-2184-405E-B5E2-2669DD51A7BE</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>48FFA957-52F3-49C6-A82B-7BB395FDD9E5</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -59,7 +135,7 @@
 		</array>
 	</dict>
 	<key>createdby</key>
-	<string>ObaTakeshi</string>
+	<string>Oba Takeshi</string>
 	<key>description</key>
 	<string></string>
 	<key>disabled</key>
@@ -82,6 +158,7 @@ echo -n $query
 
 todays=$(date "+%Y-%m-%d")
 
+touch ~/Documents/touch_memo/${todays}.txt
 open ~/Documents/touch_memo/${todays}.txt</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
@@ -93,71 +170,9 @@ open ~/Documents/touch_memo/${todays}.txt</string>
 			<key>type</key>
 			<string>alfred.workflow.action.script</string>
 			<key>uid</key>
-			<string>76D2A03D-484E-4D38-AB79-0A03D32EA310</string>
+			<string>02DB9380-CFDB-4F5C-94B6-6D77560D899C</string>
 			<key>version</key>
 			<integer>2</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>concurrently</key>
-				<false/>
-				<key>escaping</key>
-				<integer>68</integer>
-				<key>script</key>
-				<string># if not exitsts target file, touch blank file.
-
-import sys
-import os
-from datetime import datetime as dt
-
-query = sys.argv[1]
-
-sys.stdout.write(query)
-
-dirname = os.environ['HOME'] + '/Documents/touch_memo/'
-filename = dt.now().strftime('%Y-%m-%d') + '.txt'
-
-if not os.path.isdir(dirname):
-	os.mkdir(dirname)
-
-if not os.path.isfile(dirname + filename):
-	with open(dirname + filename, mode='w') as f:
-		pass</string>
-				<key>scriptargtype</key>
-				<integer>1</integer>
-				<key>scriptfile</key>
-				<string></string>
-				<key>type</key>
-				<integer>3</integer>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.script</string>
-			<key>uid</key>
-			<string>849ED8CA-E3C8-4B95-8861-ADB753BB3FE9</string>
-			<key>version</key>
-			<integer>2</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>argumenttype</key>
-				<integer>0</integer>
-				<key>keyword</key>
-				<string>m</string>
-				<key>subtext</key>
-				<string></string>
-				<key>text</key>
-				<string>memo</string>
-				<key>withspace</key>
-				<true/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.input.keyword</string>
-			<key>uid</key>
-			<string>A192736B-F8A5-4D36-ABDE-BB94FF7F7B15</string>
-			<key>version</key>
-			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -174,18 +189,278 @@ if not os.path.isfile(dirname + filename):
 						<key>matchstring</key>
 						<string>today</string>
 						<key>outputlabel</key>
-						<string>open today memo</string>
+						<string>today</string>
 						<key>uid</key>
-						<string>F0523266-F677-4587-8CD3-CC51DFE9C2CC</string>
+						<string>99CB8953-9321-4691-8B50-206212B0BB78</string>
+					</dict>
+					<dict>
+						<key>inputstring</key>
+						<string>{query}</string>
+						<key>matchcasesensitive</key>
+						<false/>
+						<key>matchmode</key>
+						<integer>0</integer>
+						<key>matchstring</key>
+						<string>daily</string>
+						<key>outputlabel</key>
+						<string>daily</string>
+						<key>uid</key>
+						<string>4F012951-6A07-48A5-8201-F6E51E5B2FAD</string>
+					</dict>
+					<dict>
+						<key>inputstring</key>
+						<string>{query}</string>
+						<key>matchcasesensitive</key>
+						<false/>
+						<key>matchmode</key>
+						<integer>0</integer>
+						<key>matchstring</key>
+						<string>clean</string>
+						<key>outputlabel</key>
+						<string>clean</string>
+						<key>uid</key>
+						<string>DE9DC13E-898E-4547-BA29-4042422D87D8</string>
 					</dict>
 				</array>
 				<key>elselabel</key>
-				<string>write memo</string>
+				<string>identification
+identificationとは
+
+identificationとは
+
+identificationとは
+
+identificationとは
+
+identificationとは
+identification</string>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.utility.conditional</string>
 			<key>uid</key>
-			<string>7F87AA06-72BC-4937-9C3A-EEA1797DD217</string>
+			<string>48FFA957-52F3-49C6-A82B-7BB395FDD9E5</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alfredfiltersresults</key>
+				<false/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<true/>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>2</integer>
+				<key>escaping</key>
+				<integer>68</integer>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string></string>
+				<key>script</key>
+				<string># encoding: utf-8
+
+import json
+
+options = {"items": [
+			{
+				"title": "today",
+				"arg": "today",
+				"subtitle": "今日のメモ"
+			},
+			{
+				"title": "daily",
+			 	"arg": "daily",
+			 	"subtitle": "過去のメモ"
+			},
+			{
+				"title": "identification",
+			 	"arg": "identification",
+			 	"subtitle": "特定のメモ"
+			},
+			{
+				"title": "clean",
+				"arg": "clean",
+				"subtitle": "空のメモを削除"
+			}
+		]}
+
+print(json.dumps(options))
+</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>subtext</key>
+				<string></string>
+				<key>title</key>
+				<string></string>
+				<key>type</key>
+				<integer>3</integer>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>E5D04F14-2184-405E-B5E2-2669DD51A7BE</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>2</integer>
+				<key>keyword</key>
+				<string>memo</string>
+				<key>subtext</key>
+				<string>Touch memo</string>
+				<key>text</key>
+				<string>Select options</string>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>A192736B-F8A5-4D36-ABDE-BB94FF7F7B15</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alfredfiltersresults</key>
+				<false/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<true/>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>2</integer>
+				<key>escaping</key>
+				<integer>68</integer>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string></string>
+				<key>script</key>
+				<string># encoding: utf-8
+
+import os
+import json
+import glob
+
+target = os.environ['HOME'] + '/Documents/touch_memo/[0-9][0-9][0-9][0-9]-[0-9][0-9]-[0-9][0-9].txt'
+
+fetch_memo = glob.glob(target)
+
+options = []
+for memo in fetch_memo:
+	option = {
+				"title": memo.split('/')[-1][:-4],
+				"arg": memo.split('/')[-1][:-4]
+			}
+
+	options.append(option)
+
+print(json.dumps({"items": options}))
+</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>subtext</key>
+				<string></string>
+				<key>title</key>
+				<string></string>
+				<key>type</key>
+				<integer>3</integer>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>B757A05F-0AD7-4CA1-AB34-FA8D546A6DB4</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>externaltriggerid</key>
+				<string>open_memo</string>
+				<key>passinputasargument</key>
+				<true/>
+				<key>passvariables</key>
+				<true/>
+				<key>workflowbundleid</key>
+				<string>self</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.callexternaltrigger</string>
+			<key>uid</key>
+			<string>BEEF73CA-4BFA-417A-9172-5D6CD8BC046A</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>externaltriggerid</key>
+				<string>open_memo</string>
+				<key>passinputasargument</key>
+				<true/>
+				<key>passvariables</key>
+				<true/>
+				<key>workflowbundleid</key>
+				<string>self</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.callexternaltrigger</string>
+			<key>uid</key>
+			<string>EA901C19-4368-4AED-B0DD-CCBE6F68A9FD</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>0</integer>
+				<key>keyword</key>
+				<string>touch</string>
+				<key>subtext</key>
+				<string>Touch memo</string>
+				<key>text</key>
+				<string>Touch memo</string>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>B4A793D3-A3FD-4CD5-831A-42CE7AA24B6D</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -195,35 +470,154 @@ if not os.path.isfile(dirname + filename):
 				<key>concurrently</key>
 				<false/>
 				<key>escaping</key>
-				<integer>68</integer>
+				<integer>102</integer>
 				<key>script</key>
-				<string>import sys
-import os
-from datetime import datetime as dt
+				<string>query=$1
 
-query = sys.argv[1]
+echo -n $query
 
-sys.stdout.write(query)
-
-dirname = os.environ['HOME'] + '/Documents/touch_memo/'
-filename = dt.now().strftime('%Y-%m-%d') + '.txt'
-
-if not os.path.isdir(dirname):
-	os.mkdir(dirname)
-
-with open(dirname + filename, mode='a') as f:
-	f.write('[' + dt.now().strftime('%H:%M:%S') + '] ' + query)</string>
+find ~/Documents/touch_memo -empty -delete</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
 				<string></string>
 				<key>type</key>
-				<integer>3</integer>
+				<integer>0</integer>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.action.script</string>
 			<key>uid</key>
-			<string>1A768C01-8DBE-4D12-97A0-163D1065CF57</string>
+			<string>C445A0DA-7A59-4831-B6B2-903B31AFA4FA</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alfredfiltersresults</key>
+				<false/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<true/>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>2</integer>
+				<key>escaping</key>
+				<integer>68</integer>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string></string>
+				<key>script</key>
+				<string># encoding: utf-8
+
+import os
+import json
+import glob
+
+target = os.environ['HOME'] + '/Documents/touch_memo/[0-9][0-9][0-9][0-9]-[0-9][0-9]-[0-9][0-9].txt'
+
+fetch_memo = glob.glob(target)
+all = glob.glob(os.environ['HOME'] + '/Documents/touch_memo/*')
+
+fetch_memo = list(set(all) - set(fetch_memo))
+
+options = []
+for memo in fetch_memo:
+	option = {
+				"title": memo.split('/')[-1][:-4],
+				"arg": memo.split('/')[-1][:-4]
+			}
+
+	options.append(option)
+
+print(json.dumps({"items": options}))
+</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>subtext</key>
+				<string></string>
+				<key>title</key>
+				<string></string>
+				<key>type</key>
+				<integer>3</integer>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>D3BE19C9-C7F0-42F9-AD9D-4663B0F9D12F</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>externaltriggerid</key>
+				<string>open_memo</string>
+				<key>passinputasargument</key>
+				<true/>
+				<key>passvariables</key>
+				<true/>
+				<key>workflowbundleid</key>
+				<string>self</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.callexternaltrigger</string>
+			<key>uid</key>
+			<string>F988662D-B97B-4F63-BB02-5AD522FE3A38</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>triggerid</key>
+				<string>open_memo</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.trigger.external</string>
+			<key>uid</key>
+			<string>DC311D32-C7C2-4636-9720-C4269F05688E</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>query=$1
+
+echo -n $query
+
+touch open ~/Documents/touch_memo/${query}.txt
+open ~/Documents/touch_memo/${query}.txt</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>327AF952-F8E2-4D20-86B4-6A454759FB2E</string>
 			<key>version</key>
 			<integer>2</integer>
 		</dict>
@@ -232,40 +626,96 @@ with open(dirname + filename, mode='a') as f:
 	<string></string>
 	<key>uidata</key>
 	<dict>
-		<key>1A768C01-8DBE-4D12-97A0-163D1065CF57</key>
+		<key>02DB9380-CFDB-4F5C-94B6-6D77560D899C</key>
 		<dict>
 			<key>xpos</key>
-			<integer>545</integer>
+			<integer>675</integer>
 			<key>ypos</key>
-			<integer>185</integer>
+			<integer>10</integer>
 		</dict>
-		<key>76D2A03D-484E-4D38-AB79-0A03D32EA310</key>
+		<key>327AF952-F8E2-4D20-86B4-6A454759FB2E</key>
 		<dict>
 			<key>xpos</key>
-			<integer>545</integer>
+			<integer>295</integer>
 			<key>ypos</key>
-			<integer>65</integer>
+			<integer>400</integer>
 		</dict>
-		<key>7F87AA06-72BC-4937-9C3A-EEA1797DD217</key>
+		<key>48FFA957-52F3-49C6-A82B-7BB395FDD9E5</key>
 		<dict>
 			<key>xpos</key>
-			<integer>370</integer>
+			<integer>470</integer>
 			<key>ypos</key>
-			<integer>160</integer>
-		</dict>
-		<key>849ED8CA-E3C8-4B95-8861-ADB753BB3FE9</key>
-		<dict>
-			<key>xpos</key>
-			<integer>210</integer>
-			<key>ypos</key>
-			<integer>140</integer>
+			<integer>115</integer>
 		</dict>
 		<key>A192736B-F8A5-4D36-ABDE-BB94FF7F7B15</key>
 		<dict>
 			<key>xpos</key>
-			<integer>35</integer>
+			<integer>65</integer>
+			<key>ypos</key>
+			<integer>125</integer>
+		</dict>
+		<key>B4A793D3-A3FD-4CD5-831A-42CE7AA24B6D</key>
+		<dict>
+			<key>xpos</key>
+			<integer>60</integer>
+			<key>ypos</key>
+			<integer>250</integer>
+		</dict>
+		<key>B757A05F-0AD7-4CA1-AB34-FA8D546A6DB4</key>
+		<dict>
+			<key>xpos</key>
+			<integer>675</integer>
 			<key>ypos</key>
 			<integer>140</integer>
+		</dict>
+		<key>BEEF73CA-4BFA-417A-9172-5D6CD8BC046A</key>
+		<dict>
+			<key>xpos</key>
+			<integer>865</integer>
+			<key>ypos</key>
+			<integer>140</integer>
+		</dict>
+		<key>C445A0DA-7A59-4831-B6B2-903B31AFA4FA</key>
+		<dict>
+			<key>xpos</key>
+			<integer>680</integer>
+			<key>ypos</key>
+			<integer>265</integer>
+		</dict>
+		<key>D3BE19C9-C7F0-42F9-AD9D-4663B0F9D12F</key>
+		<dict>
+			<key>xpos</key>
+			<integer>675</integer>
+			<key>ypos</key>
+			<integer>390</integer>
+		</dict>
+		<key>DC311D32-C7C2-4636-9720-C4269F05688E</key>
+		<dict>
+			<key>xpos</key>
+			<integer>65</integer>
+			<key>ypos</key>
+			<integer>400</integer>
+		</dict>
+		<key>E5D04F14-2184-405E-B5E2-2669DD51A7BE</key>
+		<dict>
+			<key>xpos</key>
+			<integer>285</integer>
+			<key>ypos</key>
+			<integer>125</integer>
+		</dict>
+		<key>EA901C19-4368-4AED-B0DD-CCBE6F68A9FD</key>
+		<dict>
+			<key>xpos</key>
+			<integer>290</integer>
+			<key>ypos</key>
+			<integer>250</integer>
+		</dict>
+		<key>F988662D-B97B-4F63-BB02-5AD522FE3A38</key>
+		<dict>
+			<key>xpos</key>
+			<integer>865</integer>
+			<key>ypos</key>
+			<integer>390</integer>
 		</dict>
 	</dict>
 	<key>variables</key>
@@ -276,7 +726,7 @@ with open(dirname + filename, mode='a') as f:
 	<key>variablesdontexport</key>
 	<array/>
 	<key>version</key>
-	<string>0.1.0</string>
+	<string>0.2.0</string>
 	<key>webaddress</key>
 	<string></string>
 </dict>
